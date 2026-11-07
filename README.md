@@ -101,16 +101,21 @@ The notebook compares training F1, test F1, their difference, and cross-validati
 
 **To be completed from the measured test results.** The notebook identifies the model with the highest positive-class F1. Explain why it is the best choice using its AUC, recall and MCC as supporting metrics. Do not decide the winner using accuracy alone.
 
-## Streamlit app
+## Streamlit app features
 
-The Streamlit app provides:
-- CSV upload for held-out test data only;
-- model-selection dropdown for the five saved models;
-- Accuracy, AUC, Precision, Recall, F1 and MCC;
-- confusion matrix and classification report;
-- test-data preview.
+he deployed app (app.py) is a single, self-contained file with a custom "luxury real-estate" theme. It implements every required feature plus a full EDA suite:
 
-**Live Streamlit URL:** Add the real URL after deployment on Streamlit Community Cloud.
+✅ Dataset upload (CSV) — upload your own test data, or fall back to the bundled test_data.csv.
+✅ Model selection dropdown — switch between all five trained models.
+✅ Evaluation metrics display — Accuracy, AUC, Precision, Recall, F1, MCC as live metric cards.
+✅ Confusion matrix & classification report — per-tier heatmap and report.
+🔍 Data Explorer (EDA) tab:
+market-overview cards (listings analysed, states covered, median price, median home size, premium share),
+state-wise analysis — listings by state, median price by state, price-tier mix per state (100% stacked), median home size by state, and an expandable state summary table,
+target class-balance, price distribution with tier cut-offs, numeric boxplots and a feature-correlation heatmap — all compactly sized.
+Data cleaning (duplicate removal + null imputation with missing-flag features) is applied automatically in the pipeline; it is handled, not shown as clutter.
+🏆 A "Compare Models" tab (ranked, highlighted table + grouped bar chart).
+🏘️ A "Predictions" tab with sample actual-vs-predicted rows and a CSV download.
 
 ## Run locally
 
@@ -125,12 +130,14 @@ Run all notebook cells from top to bottom. The notebook downloads the UCI datase
 streamlit run app.py
 ```
 
-## Final submission checklist
+## How to deploy (Streamlit Community Cloud)
 
-- [ ] GitHub repository contains complete code, requirements, README, test data and five saved model files.
-- [ ] README contains actual metric values and result-based observations.
-- [ ] GitHub link opens.
-- [ ] Streamlit Community Cloud link opens and all app features work.
-- [ ] Assignment executed in BITS Virtual Lab.
-- [ ] One genuine BITS Virtual Lab screenshot captured.
-- [ ] Single PDF assembled in the required order: GitHub link, live Streamlit link, BITS Virtual Lab screenshot, README content.
+Push this folder to a public GitHub repo.
+Go to https://streamlit.io/cloud → sign in with GitHub → New app.
+Select the repo, branch main, main file app.py → Deploy.
+🔗 Live Streamlit App Link: <add your deployed URL here>
+
+
+## Reproduce the models
+
+Open real_estate_classification.ipynb and run all cells — it performs EDA, feature engineering, hyper-parameter tuning, over/under-fit analysis, evaluation, and re-saves every artifact in model/ plus test_data.csv.
