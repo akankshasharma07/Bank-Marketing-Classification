@@ -1,0 +1,6 @@
+,Best Parameters,CV Macro F1
+Logistic Regression,{'classifier__C': 10},0.5968380640115442
+Decision Tree,"{'classifier__max_depth': 4, 'classifier__min_samples_leaf': 5}",0.6120313968663581
+K-Nearest Neighbors,"{'classifier__n_neighbors': 7, 'classifier__weights': 'distance'}",0.569102799145426
+Gaussian Naive Bayes,{'classifier__var_smoothing': 0.001},0.636202053712421
+Support Vector Machine,"{'classifier__C': 0.5, 'classifier__gamma': 'scale'}",0.6337303339168587

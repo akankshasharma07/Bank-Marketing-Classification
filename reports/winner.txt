@@ -1,0 +1,2 @@
+Best model based on F1 score: Support Vector Machine
+F1 score: 0.4088586030664395
