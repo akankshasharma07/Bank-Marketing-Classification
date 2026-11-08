@@ -73,11 +73,11 @@ The assignment's six metrics are calculated on the held-out test data. For this 
 
 | ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC |
 |---|---:|---:|---:|---:|---:|---:|
-| Logistic Regression | 0.7592 |0.7355 | 0.2585|0.5658 |0.3549 |0.2582 |
+| Logistic Regression | 0.8492 |0.7355 | 0.3769|0.4413 |0.4066 |0.3221 |
 | Decision Tree | 0.8833|0.6778 |0.5039 | 0.2313|0.3171 | 0.2867|
-| kNN | 0.8808 |0.6892 |0.4648 |0.1174 |0.1875 |0.1888 |
-| Naive Bayes |0.8292 |0.7010 |0.3120 |0.3808 |0.3429 |0.2475 |
-| Support Vector Machine | 0.8204|0.7651 |0.3355 |0.5445 |0.4152 |0.3291 |
+| kNN | 0.8346 |0.6892 |0.3188 |0.3630 |0.3394 |0.2460 |
+| Naive Bayes |0.8517 |0.7010 |0.3574 |0.3345 |0.3456 |0.2622 |
+| Support Vector Machine | 0.8554|0.7651 |0.3922 |0.4270 |0.4089 |0.3270 |
 
 **Do not invent or copy metric values.** Run the notebook and copy the actual results from `reports/model_comparison.csv`.
 
